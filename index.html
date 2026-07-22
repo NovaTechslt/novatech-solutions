@@ -1,23 +1,20 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NovaTech Solutions</title>
-<meta name="description" content="Loja de tecnologia com ofertas e links oficiais do Mercado Livre.">
-<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NovaTech Solutions</title>
+  <meta name="description" content="Tecnologia, informática e produtos gamer com ofertas selecionadas.">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
 <header class="header">
-  <div class="container">
-    <div class="logo">NovaTech <span>Solutions</span></div>
-
-    <form class="search">
-      <input type="search" placeholder="Pesquisar produtos...">
-      <button>Buscar</button>
+  <div class="container header-content">
+    <a class="brand" href="#inicio"><img src="assets/logo-novatech.png" alt="NovaTech Solutions"></a>
+    <form class="search" id="searchForm">
+      <input id="searchInput" type="search" placeholder="Pesquisar produtos...">
+      <button type="submit">Buscar</button>
     </form>
-
     <nav>
       <a href="#categorias">Categorias</a>
       <a href="#destaques">Destaques</a>
@@ -27,86 +24,58 @@
   </div>
 </header>
 
-<section class="hero">
-  <div class="container hero-grid">
-    <div>
-      <span class="tag">TECNOLOGIA • INFORMÁTICA • GAMER</span>
-      <h1>Tecnologia para quem exige desempenho.</h1>
-      <p>Encontre notebooks, SSDs, headsets, placas de vídeo e muito mais.</p>
-
-      <div class="buttons">
-        <a class="btn primary" href="#destaques">Ver ofertas</a>
-        <a class="btn secondary" href="#categorias">Explorar categorias</a>
+<main id="inicio">
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="tag">TECNOLOGIA • INFORMÁTICA • GAMER</span>
+        <h1>Tecnologia para quem exige desempenho.</h1>
+        <p>Encontre notebooks, SSDs, headsets, monitores e acessórios selecionados.</p>
+        <div class="buttons">
+          <a class="btn primary" href="#ofertas">Ver ofertas</a>
+          <a class="btn secondary" href="#categorias">Explorar categorias</a>
+        </div>
       </div>
+      <a class="hero-banner" href="#ofertas"><img src="assets/banner-ofertas.png" alt="Ofertas imperdíveis"></a>
     </div>
+  </section>
 
-    <div class="hero-card">
-      <h3>🔥 Oferta em destaque</h3>
-      <p>Espaço reservado para o banner principal.</p>
+  <section id="categorias" class="container section">
+    <h2>Categorias</h2>
+    <div class="category-grid">
+      <button class="category" data-category="notebooks">💻 Notebooks</button>
+      <button class="category" data-category="monitores">🖥️ Monitores</button>
+      <button class="category" data-category="teclados">⌨️ Teclados</button>
+      <button class="category" data-category="mouses">🖱️ Mouses</button>
+      <button class="category" data-category="headsets">🎧 Headsets</button>
+      <button class="category" data-category="ssd">💾 SSD</button>
+      <button class="category" data-category="memorias">🧠 Memórias</button>
+      <button class="category" data-category="gamer">🎮 Gamer</button>
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="categorias" class="container">
-<h2>Categorias</h2>
+  <section id="destaques" class="container section">
+    <h2>Produtos em destaque</h2>
+    <div id="productsGrid" class="products-grid"></div>
+  </section>
 
-<div class="grid">
-<div class="category">💻 Notebooks</div>
-<div class="category">🖥️ Monitores</div>
-<div class="category">⌨️ Teclados</div>
-<div class="category">🖱️ Mouses</div>
-<div class="category">🎧 Headsets</div>
-<div class="category">💾 SSD</div>
-<div class="category">🧠 Memórias</div>
-<div class="category">🎮 Gamer</div>
-</div>
-</section>
-
-<section id="destaques" class="container">
-<h2>Produtos em Destaque</h2>
-
-<div class="products">
-<article class="product">
-<h3>Produto 01</h3>
-<p>Descrição curta do produto.</p>
-<a class="btn primary" href="#">Comprar</a>
-</article>
-
-<article class="product">
-<h3>Produto 02</h3>
-<p>Descrição curta do produto.</p>
-<a class="btn primary" href="#">Comprar</a>
-</article>
-
-<article class="product">
-<h3>Produto 03</h3>
-<p>Descrição curta do produto.</p>
-<a class="btn primary" href="#">Comprar</a>
-</article>
-
-<article class="product">
-<h3>Produto 04</h3>
-<p>Descrição curta do produto.</p>
-<a class="btn primary" href="#">Comprar</a>
-</article>
-</div>
-</section>
-
-<section id="ofertas" class="container">
-<h2>Ofertas do Dia</h2>
-<p>Área reservada para promoções e campanhas.</p>
-</section>
+  <section id="ofertas" class="container section offer-strip">
+    <div>
+      <h2>Ofertas do dia</h2>
+      <p>Os botões serão ligados aos seus links de afiliado.</p>
+    </div>
+    <a class="btn primary" href="#destaques">Conferir produtos</a>
+  </section>
+</main>
 
 <footer id="contato">
-<div class="container">
-<h3>NovaTech Solutions</h3>
-<p>CNPJ: 55.292.400/0001-00</p>
-<p>E-mail: nova.techsolutions@outlook.com</p>
-<p>São José dos Campos - SP</p>
-</div>
+  <div class="container footer-grid">
+    <div><strong>NovaTech Solutions</strong><p>São José dos Campos - SP</p></div>
+    <div><p>CNPJ: 55.292.400/0001-00</p><p>nova.techsolutions@outlook.com</p></div>
+    <div><a href="politica.html">Política de privacidade</a><a href="termos.html">Termos de uso</a></div>
+  </div>
 </footer>
 
 <script src="app.js"></script>
-
 </body>
 </html>
