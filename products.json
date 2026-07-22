@@ -1,14 +1,74 @@
 [
   {
-    "name": "Notebook Gamer",
+    "id": "notebook",
+    "name": "Notebook Acer Aspire Go 15 AG15-71P-5939",
     "category": "notebooks",
-    "price": "R$ 4.999,90",
-    "link": "#"
+    "badge": "Destaque",
+    "description": "Intel Core i5-13420H, 8 GB DDR5, SSD NVMe 256 GB e tela de 15,6 polegadas.",
+    "image": "assets/products/notebook.jpg",
+    "link": "https://meli.la/31ZoJrm"
   },
   {
-    "name": "Monitor Gamer 27 polegadas",
+    "id": "monitor",
+    "name": "Monitor Gamer",
     "category": "monitores",
-    "price": "R$ 1.299,90",
-    "link": "#"
+    "badge": "Recomendado",
+    "description": "Monitor selecionado para jogos, estudo e produtividade.",
+    "image": "assets/products/monitor.jpg",
+    "link": "https://meli.la/1VMGdF6"
+  },
+  {
+    "id": "ssd",
+    "name": "SSD Pholex 256 GB SATA III 2,5 polegadas",
+    "category": "ssd",
+    "badge": "Custo-benefício",
+    "description": "Armazenamento interno para notebooks e desktops, leitura de até 500 MB/s.",
+    "image": "assets/products/ssd.jpg",
+    "link": "https://meli.la/1JnvReU"
+  },
+  {
+    "id": "memoria",
+    "name": "Memória RAM SODIMM Puskill Killblade 16 GB DDR4",
+    "category": "memorias",
+    "badge": "Upgrade",
+    "description": "Memória 3200 MHz para notebook gamer e melhoria de desempenho.",
+    "image": "assets/products/memoria.jpg",
+    "link": "https://meli.la/2ZsnNVp"
+  },
+  {
+    "id": "teclado",
+    "name": "Teclado Gamer Mecânico Warrior Royal Score TC313",
+    "category": "teclados",
+    "badge": "Gamer",
+    "description": "Teclado mecânico preto para jogos e produtividade.",
+    "image": "assets/products/teclado.jpg",
+    "link": "https://meli.la/1kkUjtk"
+  },
+  {
+    "id": "mouse",
+    "name": "Mouse Gamer Óptico 3200 DPI com LED e 7 botões",
+    "category": "mouses",
+    "badge": "Oferta",
+    "description": "Mouse USB com fio, iluminação LED e sete botões.",
+    "image": "assets/products/mouse.jpg",
+    "link": "https://meli.la/1gptdDh"
+  },
+  {
+    "id": "headset",
+    "name": "Headset Gamer RGB LED para PC e videogame",
+    "category": "headsets",
+    "badge": "Gamer",
+    "description": "Fone gamer com microfone e iluminação RGB LED.",
+    "image": "assets/products/headset.jpg",
+    "link": "https://meli.la/2QnEC8g"
+  },
+  {
+    "id": "cadeira",
+    "name": "Cadeira Gamer Ergonômica Alpha Rija",
+    "category": "cadeiras",
+    "badge": "Conforto",
+    "description": "Cadeira ergonômica em couro sintético preto.",
+    "image": "assets/products/cadeira.jpg",
+    "link": "https://meli.la/1kwAmpA"
   }
 ]

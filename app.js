@@ -1,47 +1,60 @@
 
-const products=[
-{name:"Notebook Gamer",category:"notebooks",price:"R$ 4.999,90",icon:"💻",link:"#"},
-{name:"Monitor Gamer 27 polegadas",category:"monitores",price:"R$ 1.299,90",icon:"🖥️",link:"#"},
-{name:"Headset Gamer",category:"headsets",price:"R$ 299,90",icon:"🎧",link:"#"},
-{name:"SSD NVMe 1 TB",category:"ssd",price:"R$ 449,90",icon:"💾",link:"#"},
-{name:"Teclado Mecânico RGB",category:"teclados",price:"R$ 349,90",icon:"⌨️",link:"#"},
-{name:"Mouse Gamer",category:"mouses",price:"R$ 199,90",icon:"🖱️",link:"#"},
-{name:"Memória RAM 16 GB",category:"memorias",price:"R$ 319,90",icon:"🧠",link:"#"},
-{name:"Controle Gamer",category:"gamer",price:"R$ 249,90",icon:"🎮",link:"#"}
-];
+let products = [];
+let activeCategory = 'all';
 
-const grid=document.querySelector("#productsGrid");
+const grid = document.querySelector('#productsGrid');
+const empty = document.querySelector('#emptyState');
+const searchInput = document.querySelector('#searchInput');
 
-function renderProducts(items){
-  grid.innerHTML=items.map(p=>`
-    <article class="product-card">
-      <div class="product-image">${p.icon}</div>
-      <div class="product-info">
-        <small>${p.category.toUpperCase()}</small>
-        <h3>${p.name}</h3>
-        <div class="product-price">${p.price}</div>
-        <a class="btn primary" href="${p.link}" target="_blank" rel="noopener sponsored">
-          Comprar no Mercado Livre
-        </a>
-      </div>
-    </article>`).join("");
+function card(p){
+  return `<article class="card">
+    <div class="card-media">
+      <img src="${p.image}" alt="${p.name}" loading="lazy">
+      <span class="badge">${p.badge}</span>
+    </div>
+    <div class="card-body">
+      <span class="category-label">${p.category}</span>
+      <h3>${p.name}</h3>
+      <p>${p.description}</p>
+      <div class="price-note">Consulte o preço atualizado</div>
+      <a class="btn primary" href="${p.link}" target="_blank" rel="noopener sponsored">Comprar no Mercado Livre</a>
+    </div>
+  </article>`;
 }
 
-document.querySelector("#searchForm").addEventListener("submit",e=>{
-  e.preventDefault();
-  const term=document.querySelector("#searchInput").value.toLowerCase().trim();
-  renderProducts(products.filter(p=>
-    p.name.toLowerCase().includes(term) ||
-    p.category.toLowerCase().includes(term)
-  ));
-  document.querySelector("#destaques").scrollIntoView({behavior:"smooth"});
-});
+function render(){
+  const term = searchInput.value.toLowerCase().trim();
+  const filtered = products.filter(p => {
+    const categoryOk = activeCategory === 'all' || p.category === activeCategory;
+    const textOk = !term || (p.name + ' ' + p.description + ' ' + p.category).toLowerCase().includes(term);
+    return categoryOk && textOk;
+  });
+  grid.innerHTML = filtered.map(card).join('');
+  empty.hidden = filtered.length > 0;
+}
 
-document.querySelectorAll(".category").forEach(button=>{
-  button.addEventListener("click",()=>{
-    renderProducts(products.filter(p=>p.category===button.dataset.category));
-    document.querySelector("#destaques").scrollIntoView({behavior:"smooth"});
+fetch('products.json')
+  .then(r => {
+    if(!r.ok) throw new Error('Falha ao carregar o catálogo');
+    return r.json();
+  })
+  .then(data => { products = data; render(); })
+  .catch(() => {
+    grid.innerHTML = '<p>Não foi possível carregar o catálogo.</p>';
+  });
+
+document.querySelector('#searchForm').addEventListener('submit', e => {
+  e.preventDefault(); render(); document.querySelector('#produtos').scrollIntoView({behavior:'smooth'});
+});
+searchInput.addEventListener('input', render);
+
+document.querySelectorAll('[data-category]').forEach(btn => {
+  btn.addEventListener('click', () => {
+    activeCategory = btn.dataset.category;
+    document.querySelectorAll('[data-category]').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    render();
+    document.querySelector('#produtos').scrollIntoView({behavior:'smooth'});
   });
 });
-
-renderProducts(products);
+document.querySelector('[data-category="all"]').classList.add('active');
