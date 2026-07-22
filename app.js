@@ -9,7 +9,7 @@ const searchInput = document.querySelector('#searchInput');
 function card(p){
   return `<article class="card">
     <div class="card-media">
-      <img src="${p.image}" alt="${p.name}" loading="lazy">
+      <img src="${p.image}" alt="${p.name}" loading="lazy" onerror="this.onerror=null;this.src='assets/banner-ofertas.png'">
       <span class="badge">${p.badge}</span>
     </div>
     <div class="card-body">
