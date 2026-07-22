@@ -7,9 +7,41 @@ const products=[
 {name:"Teclado Mecânico RGB",category:"teclados",price:"R$ 349,90",icon:"⌨️",link:"#"},
 {name:"Mouse Gamer",category:"mouses",price:"R$ 199,90",icon:"🖱️",link:"#"},
 {name:"Memória RAM 16 GB",category:"memorias",price:"R$ 319,90",icon:"🧠",link:"#"},
-{name:"Controle Gamer",category:"gamer",price:"R$ 249,90",icon:"🎮",link:"#"}];
+{name:"Controle Gamer",category:"gamer",price:"R$ 249,90",icon:"🎮",link:"#"}
+];
+
 const grid=document.querySelector("#productsGrid");
-function renderProducts(items){grid.innerHTML=items.map(p=>`<article class="product-card"><div class="product-image">${p.icon}</div><div class="product-info"><small>${p.category.toUpperCase()}</small><h3>${p.name}</h3><div class="product-price">${p.price}</div><a class="btn primary" href="${p.link}" target="_blank" rel="noopener sponsored">Comprar no Mercado Livre</a></div></article>`).join("")}
-document.querySelector("#searchForm").addEventListener("submit",e=>{e.preventDefault();const t=document.querySelector("#searchInput").value.toLowerCase().trim();renderProducts(products.filter(p=>p.name.toLowerCase().includes(t)||p.category.includes(t)));document.querySelector("#destaques").scrollIntoView()});
-document.querySelectorAll(".category").forEach(b=>b.addEventListener("click",()=>{renderProducts(products.filter(p=>p.category===b.dataset.category));document.querySelector("#destaques").scrollIntoView()}));
+
+function renderProducts(items){
+  grid.innerHTML=items.map(p=>`
+    <article class="product-card">
+      <div class="product-image">${p.icon}</div>
+      <div class="product-info">
+        <small>${p.category.toUpperCase()}</small>
+        <h3>${p.name}</h3>
+        <div class="product-price">${p.price}</div>
+        <a class="btn primary" href="${p.link}" target="_blank" rel="noopener sponsored">
+          Comprar no Mercado Livre
+        </a>
+      </div>
+    </article>`).join("");
+}
+
+document.querySelector("#searchForm").addEventListener("submit",e=>{
+  e.preventDefault();
+  const term=document.querySelector("#searchInput").value.toLowerCase().trim();
+  renderProducts(products.filter(p=>
+    p.name.toLowerCase().includes(term) ||
+    p.category.toLowerCase().includes(term)
+  ));
+  document.querySelector("#destaques").scrollIntoView({behavior:"smooth"});
+});
+
+document.querySelectorAll(".category").forEach(button=>{
+  button.addEventListener("click",()=>{
+    renderProducts(products.filter(p=>p.category===button.dataset.category));
+    document.querySelector("#destaques").scrollIntoView({behavior:"smooth"});
+  });
+});
+
 renderProducts(products);

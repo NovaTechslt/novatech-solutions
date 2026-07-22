@@ -10,11 +10,15 @@
 <body>
 <header class="header">
   <div class="container header-content">
-    <a class="brand" href="#inicio"><img src="assets/logo-novatech.png" alt="NovaTech Solutions"></a>
+    <a class="brand" href="#inicio" aria-label="NovaTech Solutions">
+      <img src="assets/logo-header.png" alt="NovaTech Solutions">
+    </a>
+
     <form class="search" id="searchForm">
       <input id="searchInput" type="search" placeholder="Pesquisar produtos...">
       <button type="submit">Buscar</button>
     </form>
+
     <nav>
       <a href="#categorias">Categorias</a>
       <a href="#destaques">Destaques</a>
@@ -27,7 +31,7 @@
 <main id="inicio">
   <section class="hero">
     <div class="container hero-grid">
-      <div>
+      <div class="hero-copy">
         <span class="tag">TECNOLOGIA • INFORMÁTICA • GAMER</span>
         <h1>Tecnologia para quem exige desempenho.</h1>
         <p>Encontre notebooks, SSDs, headsets, monitores e acessórios selecionados.</p>
@@ -36,33 +40,44 @@
           <a class="btn secondary" href="#categorias">Explorar categorias</a>
         </div>
       </div>
-      <a class="hero-banner" href="#ofertas"><img src="assets/banner-ofertas.png" alt="Ofertas imperdíveis"></a>
+
+      <a class="hero-banner" href="#ofertas">
+        <img src="assets/banner-ofertas.png" alt="Ofertas imperdíveis">
+      </a>
     </div>
   </section>
 
   <section id="categorias" class="container section">
-    <h2>Categorias</h2>
+    <div class="section-heading">
+      <span>EXPLORE</span>
+      <h2>Categorias</h2>
+    </div>
+
     <div class="category-grid">
-      <button class="category" data-category="notebooks">💻 Notebooks</button>
-      <button class="category" data-category="monitores">🖥️ Monitores</button>
-      <button class="category" data-category="teclados">⌨️ Teclados</button>
-      <button class="category" data-category="mouses">🖱️ Mouses</button>
-      <button class="category" data-category="headsets">🎧 Headsets</button>
-      <button class="category" data-category="ssd">💾 SSD</button>
-      <button class="category" data-category="memorias">🧠 Memórias</button>
-      <button class="category" data-category="gamer">🎮 Gamer</button>
+      <button class="category" data-category="notebooks">💻 <strong>Notebooks</strong></button>
+      <button class="category" data-category="monitores">🖥️ <strong>Monitores</strong></button>
+      <button class="category" data-category="teclados">⌨️ <strong>Teclados</strong></button>
+      <button class="category" data-category="mouses">🖱️ <strong>Mouses</strong></button>
+      <button class="category" data-category="headsets">🎧 <strong>Headsets</strong></button>
+      <button class="category" data-category="ssd">💾 <strong>SSD</strong></button>
+      <button class="category" data-category="memorias">🧠 <strong>Memórias</strong></button>
+      <button class="category" data-category="gamer">🎮 <strong>Gamer</strong></button>
     </div>
   </section>
 
   <section id="destaques" class="container section">
-    <h2>Produtos em destaque</h2>
+    <div class="section-heading">
+      <span>SELEÇÃO NOVATECH</span>
+      <h2>Produtos em destaque</h2>
+    </div>
     <div id="productsGrid" class="products-grid"></div>
   </section>
 
-  <section id="ofertas" class="container section offer-strip">
+  <section id="ofertas" class="container offer-strip">
     <div>
-      <h2>Ofertas do dia</h2>
-      <p>Os botões serão ligados aos seus links de afiliado.</p>
+      <span>OFERTAS DO DIA</span>
+      <h2>Equipamentos para elevar seu setup</h2>
+      <p>Os botões serão ligados aos seus links oficiais de afiliado.</p>
     </div>
     <a class="btn primary" href="#destaques">Conferir produtos</a>
   </section>
@@ -70,9 +85,18 @@
 
 <footer id="contato">
   <div class="container footer-grid">
-    <div><strong>NovaTech Solutions</strong><p>São José dos Campos - SP</p></div>
-    <div><p>CNPJ: 55.292.400/0001-00</p><p>nova.techsolutions@outlook.com</p></div>
-    <div><a href="politica.html">Política de privacidade</a><a href="termos.html">Termos de uso</a></div>
+    <div>
+      <strong>NovaTech Solutions</strong>
+      <p>São José dos Campos - SP</p>
+    </div>
+    <div>
+      <p>CNPJ: 55.292.400/0001-00</p>
+      <p>nova.techsolutions@outlook.com</p>
+    </div>
+    <div>
+      <a href="politica.html">Política de privacidade</a>
+      <a href="termos.html">Termos de uso</a>
+    </div>
   </div>
 </footer>
 
