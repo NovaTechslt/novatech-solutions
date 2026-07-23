@@ -1,18 +1,17 @@
-NOVATECH SOLUTIONS V5.1 — LAYOUT CORRIGIDO
+NOVATECH SOLUTIONS V5.2 — AJUSTE VISUAL
 
-Esta versão corrige:
-- cards ocupando a largura inteira;
-- imagens muito grandes;
-- quebra do catálogo em alguns níveis de zoom;
-- cache do navegador carregando CSS antigo.
+Correções:
+- título principal menor;
+- melhor equilíbrio entre texto e banner;
+- menos espaço vertical entre seções;
+- melhor aparência em telas menores;
+- cache atualizado para carregar o CSS novo.
 
 PUBLICAÇÃO:
 1. Descompacte o ZIP.
 2. No GitHub: Add file > Upload files.
 3. Envie todos os arquivos e a pasta assets.
-4. Substitua os arquivos antigos.
+4. Substitua os arquivos existentes.
 5. Clique em Commit changes.
 6. Aguarde 1 a 2 minutos.
 7. Pressione Ctrl + F5.
-
-Verifique também se o zoom do navegador está em 100% usando Ctrl + 0.
