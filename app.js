@@ -9,13 +9,15 @@ const searchInput = document.querySelector('#searchInput');
 function card(p){
   return `<article class="card">
     <div class="card-media">
-      <img src="${p.image}" alt="${p.name}" loading="lazy" onerror="this.onerror=null;this.src='assets/banner-ofertas.png'">
+      <img src="${p.image}" alt="${p.name}" loading="lazy"
+        onerror="this.onerror=null;this.src='assets/products/${p.id}.jpg'">
       <span class="badge">${p.badge}</span>
     </div>
     <div class="card-body">
       <span class="category-label">${p.category}</span>
       <h3>${p.name}</h3>
       <p>${p.description}</p>
+      <small class="image-note">${p.imageNote || 'Imagem ilustrativa.'}</small>
       <div class="price-note">Consulte o preço atualizado</div>
       <a class="btn primary" href="${p.link}" target="_blank" rel="noopener sponsored">Comprar no Mercado Livre</a>
     </div>
@@ -33,7 +35,7 @@ function render(){
   empty.hidden = filtered.length > 0;
 }
 
-fetch('products.json')
+fetch('products.json?v=4')
   .then(r => {
     if(!r.ok) throw new Error('Falha ao carregar o catálogo');
     return r.json();

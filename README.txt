@@ -1,15 +1,18 @@
-NOVATECH SOLUTIONS V3.1 — IMAGENS CORRIGIDAS
+NOVATECH SOLUTIONS V4 — FOTOS DOS PRODUTOS
 
-Esta versão incorpora as imagens diretamente no catálogo.
-Não depende da pasta assets/products para exibir as imagens.
+- Fotos externas nos cards.
+- Imagem local de segurança se a foto externa falhar.
+- Correção do enquadramento horizontal.
+- Os 8 links de afiliado foram mantidos.
 
 COMO PUBLICAR:
 1. Descompacte o ZIP.
-2. No GitHub, abra o repositório.
-3. Add file > Upload files.
-4. Envie todos os arquivos e a pasta assets.
-5. Confirme a substituição dos arquivos existentes.
-6. Clique em Commit changes.
-7. Aguarde de 1 a 2 minutos e pressione Ctrl + F5.
+2. No GitHub: Add file > Upload files.
+3. Envie todos os arquivos e a pasta assets.
+4. Substitua os arquivos antigos.
+5. Clique em Commit changes.
+6. Aguarde 1 a 2 minutos.
+7. Atualize com Ctrl + F5.
 
-Os 8 links de afiliado permanecem cadastrados.
+Algumas fotos são ilustrativas. Modelo, preço, estoque e condições devem
+ser confirmados no anúncio do Mercado Livre.
