@@ -7,7 +7,10 @@
     "description": "Intel Core i5-13420H, 8 GB DDR5, SSD NVMe 256 GB e tela de 15,6 polegadas.",
     "image": "https://img.kalunga.com.br/FotosdeProdutos/222754d.jpg",
     "link": "https://meli.la/31ZoJrm",
-    "imageNote": "Imagem ilustrativa. Confira o anúncio antes de comprar."
+    "imageNote": "Imagem ilustrativa. Confira o anúncio antes de comprar.",
+    "tag": "Mais procurado",
+    "highlight": "Intel Core i5 • DDR5 • SSD NVMe",
+    "featured": true
   },
   {
     "id": "monitor",
@@ -17,7 +20,10 @@
     "description": "Monitor selecionado para jogos, estudo e produtividade.",
     "image": "https://images.unsplash.com/photo-1593640408182-31c70c8268f5?auto=format&fit=crop&w=900&q=85",
     "link": "https://meli.la/1VMGdF6",
-    "imageNote": "Imagem ilustrativa. Confira o anúncio antes de comprar."
+    "imageNote": "Imagem ilustrativa. Confira o anúncio antes de comprar.",
+    "tag": "Recomendado",
+    "highlight": "Ideal para setup gamer e produtividade",
+    "featured": true
   },
   {
     "id": "ssd",
@@ -27,7 +33,10 @@
     "description": "Armazenamento interno para notebooks e desktops, leitura de até 500 MB/s.",
     "image": "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?auto=format&fit=crop&w=900&q=85",
     "link": "https://meli.la/1JnvReU",
-    "imageNote": "Imagem ilustrativa. Confira o anúncio antes de comprar."
+    "imageNote": "Imagem ilustrativa. Confira o anúncio antes de comprar.",
+    "tag": "Custo-benefício",
+    "highlight": "Upgrade rápido para notebook ou desktop",
+    "featured": false
   },
   {
     "id": "memoria",
@@ -37,7 +46,10 @@
     "description": "Memória 3200 MHz para notebook gamer e melhoria de desempenho.",
     "image": "https://objectstorage.sa-saopaulo-1.oraclecloud.com/n/grxh0rccf19c/b/achapromo-files/o/achapromo/products/mercadolivre/D_Q_NP_2X_775531-MLA99504512776_112025-E.webp",
     "link": "https://meli.la/2ZsnNVp",
-    "imageNote": "Imagem ilustrativa. Confira o anúncio antes de comprar."
+    "imageNote": "Imagem ilustrativa. Confira o anúncio antes de comprar.",
+    "tag": "Upgrade",
+    "highlight": "16 GB DDR4 • 3200 MHz • SODIMM",
+    "featured": false
   },
   {
     "id": "teclado",
@@ -47,7 +59,10 @@
     "description": "Teclado mecânico preto para jogos e produtividade.",
     "image": "https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=900&q=85",
     "link": "https://meli.la/1kkUjtk",
-    "imageNote": "Imagem ilustrativa. Confira o anúncio antes de comprar."
+    "imageNote": "Imagem ilustrativa. Confira o anúncio antes de comprar.",
+    "tag": "Gamer",
+    "highlight": "Teclado mecânico para jogos e trabalho",
+    "featured": false
   },
   {
     "id": "mouse",
@@ -57,7 +72,10 @@
     "description": "Mouse USB com fio, iluminação LED e sete botões.",
     "image": "https://http2.mlstatic.com/D_Q_NP_798148-MLB94156882955_102025-R.webp",
     "link": "https://meli.la/1gptdDh",
-    "imageNote": "Imagem ilustrativa. Confira o anúncio antes de comprar."
+    "imageNote": "Imagem ilustrativa. Confira o anúncio antes de comprar.",
+    "tag": "Oferta",
+    "highlight": "3200 DPI • LED • 7 botões",
+    "featured": false
   },
   {
     "id": "headset",
@@ -67,7 +85,10 @@
     "description": "Fone gamer com microfone e iluminação RGB LED.",
     "image": "https://images.unsplash.com/photo-1599669454699-248893623440?auto=format&fit=crop&w=900&q=85",
     "link": "https://meli.la/2QnEC8g",
-    "imageNote": "Imagem ilustrativa. Confira o anúncio antes de comprar."
+    "imageNote": "Imagem ilustrativa. Confira o anúncio antes de comprar.",
+    "tag": "Gamer",
+    "highlight": "Microfone integrado • Iluminação RGB",
+    "featured": false
   },
   {
     "id": "cadeira",
@@ -77,6 +98,9 @@
     "description": "Cadeira ergonômica em couro sintético preto.",
     "image": "https://images.unsplash.com/photo-1598550476439-6847785fcea6?auto=format&fit=crop&w=900&q=85",
     "link": "https://meli.la/1kwAmpA",
-    "imageNote": "Imagem ilustrativa. Confira o anúncio antes de comprar."
+    "imageNote": "Imagem ilustrativa. Confira o anúncio antes de comprar.",
+    "tag": "Conforto",
+    "highlight": "Modelo ergonômico em couro sintético",
+    "featured": false
   }
 ]

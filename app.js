@@ -1,62 +1,8 @@
-
-let products = [];
-let activeCategory = 'all';
-
-const grid = document.querySelector('#productsGrid');
-const empty = document.querySelector('#emptyState');
-const searchInput = document.querySelector('#searchInput');
-
-function card(p){
-  return `<article class="card">
-    <div class="card-media">
-      <img src="${p.image}" alt="${p.name}" loading="lazy"
-        onerror="this.onerror=null;this.src='assets/products/${p.id}.jpg'">
-      <span class="badge">${p.badge}</span>
-    </div>
-    <div class="card-body">
-      <span class="category-label">${p.category}</span>
-      <h3>${p.name}</h3>
-      <p>${p.description}</p>
-      <small class="image-note">${p.imageNote || 'Imagem ilustrativa.'}</small>
-      <div class="price-note">Consulte o preço atualizado</div>
-      <a class="btn primary" href="${p.link}" target="_blank" rel="noopener sponsored">Comprar no Mercado Livre</a>
-    </div>
-  </article>`;
-}
-
-function render(){
-  const term = searchInput.value.toLowerCase().trim();
-  const filtered = products.filter(p => {
-    const categoryOk = activeCategory === 'all' || p.category === activeCategory;
-    const textOk = !term || (p.name + ' ' + p.description + ' ' + p.category).toLowerCase().includes(term);
-    return categoryOk && textOk;
-  });
-  grid.innerHTML = filtered.map(card).join('');
-  empty.hidden = filtered.length > 0;
-}
-
-fetch('products.json?v=4')
-  .then(r => {
-    if(!r.ok) throw new Error('Falha ao carregar o catálogo');
-    return r.json();
-  })
-  .then(data => { products = data; render(); })
-  .catch(() => {
-    grid.innerHTML = '<p>Não foi possível carregar o catálogo.</p>';
-  });
-
-document.querySelector('#searchForm').addEventListener('submit', e => {
-  e.preventDefault(); render(); document.querySelector('#produtos').scrollIntoView({behavior:'smooth'});
-});
-searchInput.addEventListener('input', render);
-
-document.querySelectorAll('[data-category]').forEach(btn => {
-  btn.addEventListener('click', () => {
-    activeCategory = btn.dataset.category;
-    document.querySelectorAll('[data-category]').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    render();
-    document.querySelector('#produtos').scrollIntoView({behavior:'smooth'});
-  });
-});
-document.querySelector('[data-category="all"]').classList.add('active');
+let products=[],activeCategory='all';
+const grid=document.querySelector('#productsGrid'),featured=document.querySelector('#featuredGrid'),empty=document.querySelector('#emptyState'),search=document.querySelector('#searchInput'),count=document.querySelector('#resultCount');
+function card(p){return `<article class="card"><div class="card-media"><img src="${p.image}" alt="${p.name}" loading="lazy" onerror="this.onerror=null;this.src='assets/products/${p.id}.jpg'"><span class="badge">${p.tag}</span></div><div class="card-body"><span class="category-label">${p.category}</span><h3>${p.name}</h3><div class="highlight">${p.highlight}</div><p>${p.description}</p><small class="image-note">${p.imageNote||'Imagem ilustrativa. Confira o anúncio.'}</small><div class="price-note">Ver preço atualizado no anúncio</div><a class="btn primary" href="${p.link}" target="_blank" rel="noopener sponsored">Comprar no Mercado Livre</a></div></article>`}
+function feature(p){return `<article class="featured-card"><img src="${p.image}" alt="${p.name}" loading="lazy"><div class="featured-content"><span class="eyebrow">${p.tag}</span><h3>${p.name}</h3><p>${p.highlight}</p><a class="btn primary" href="${p.link}" target="_blank" rel="noopener sponsored">Ver no Mercado Livre</a></div></article>`}
+function render(){const term=search.value.toLowerCase().trim();const filtered=products.filter(p=>(activeCategory==='all'||p.category===activeCategory)&&(!term||(`${p.name} ${p.category} ${p.description} ${p.highlight}`).toLowerCase().includes(term)));grid.innerHTML=filtered.map(card).join('');count.textContent=`${filtered.length} produto${filtered.length===1?'':'s'}`;empty.hidden=filtered.length>0}
+function setCategory(c){activeCategory=c;document.querySelectorAll('[data-category]').forEach(b=>b.classList.toggle('active',b.dataset.category===c));render();document.querySelector('#produtos').scrollIntoView({behavior:'smooth'})}
+fetch('products.json?v=5').then(r=>r.json()).then(data=>{products=data;featured.innerHTML=products.filter(p=>p.featured).map(feature).join('');render()}).catch(()=>grid.innerHTML='<p>Não foi possível carregar o catálogo.</p>');
+document.querySelector('#searchForm').addEventListener('submit',e=>{e.preventDefault();render();document.querySelector('#produtos').scrollIntoView({behavior:'smooth'})});search.addEventListener('input',render);document.querySelectorAll('[data-category]').forEach(b=>b.addEventListener('click',()=>setCategory(b.dataset.category)));
