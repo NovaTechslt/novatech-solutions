@@ -1,17 +1,16 @@
-NOVATECH SOLUTIONS V5.3 — CORREÇÃO DE CACHE
+NOVATECH SOLUTIONS V5.4 — CATÁLOGO CORRIGIDO
 
-Esta versão coloca o ajuste principal diretamente no index.html.
-Assim, a mudança aparece mesmo quando o navegador insiste em usar CSS antigo.
+Problema corrigido:
+- o products.json tinha quebras de linha inválidas dentro dos textos;
+- por isso o JavaScript não conseguia carregar os 8 produtos.
 
-ALTERAÇÕES VISÍVEIS:
-- título principal bem menor;
-- banner maior em relação ao texto;
-- menos espaço entre as seções;
-- categorias mais compactas.
+COMO PUBLICAR:
+1. Descompacte este ZIP.
+2. No GitHub, clique em Add file > Upload files.
+3. Envie todos os arquivos e substitua os existentes.
+4. Clique em Commit changes.
+5. Aguarde 1 a 2 minutos.
+6. Abra o site e pressione Ctrl + Shift + R.
 
-PUBLICAÇÃO:
-1. Descompacte o ZIP.
-2. No GitHub, substitua principalmente index.html e styles.css.
-3. Confirme o Commit changes.
-4. Aguarde o GitHub Pages atualizar.
-5. Abra o site em uma janela anônima ou pressione Ctrl + Shift + R.
+Endereço do site:
+https://novatechslt.github.io/novatech-solutions/
