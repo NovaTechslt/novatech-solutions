@@ -1,17 +1,17 @@
-NOVATECH SOLUTIONS V5.2 — AJUSTE VISUAL
+NOVATECH SOLUTIONS V5.3 — CORREÇÃO DE CACHE
 
-Correções:
-- título principal menor;
-- melhor equilíbrio entre texto e banner;
-- menos espaço vertical entre seções;
-- melhor aparência em telas menores;
-- cache atualizado para carregar o CSS novo.
+Esta versão coloca o ajuste principal diretamente no index.html.
+Assim, a mudança aparece mesmo quando o navegador insiste em usar CSS antigo.
+
+ALTERAÇÕES VISÍVEIS:
+- título principal bem menor;
+- banner maior em relação ao texto;
+- menos espaço entre as seções;
+- categorias mais compactas.
 
 PUBLICAÇÃO:
 1. Descompacte o ZIP.
-2. No GitHub: Add file > Upload files.
-3. Envie todos os arquivos e a pasta assets.
-4. Substitua os arquivos existentes.
-5. Clique em Commit changes.
-6. Aguarde 1 a 2 minutos.
-7. Pressione Ctrl + F5.
+2. No GitHub, substitua principalmente index.html e styles.css.
+3. Confirme o Commit changes.
+4. Aguarde o GitHub Pages atualizar.
+5. Abra o site em uma janela anônima ou pressione Ctrl + Shift + R.
